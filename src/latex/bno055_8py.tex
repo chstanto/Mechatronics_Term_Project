@@ -1,0 +1,24 @@
+\hypertarget{bno055_8py}{}\doxysection{bno055.\+py File Reference}
+\label{bno055_8py}\index{bno055.py@{bno055.py}}
+
+
+This file contains a class for obtaining angular data from the bno055 I\+MU module.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbno055_1_1BNO055}{bno055.\+B\+N\+O055}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classbno055_1_1BNO055}{B\+N\+O055}} is a class used to contain obtain the Eularian pitch and roll angles from the bno055 module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bno055_8py_a0fdb03d8fce0725ebbd832ac166942a0}\label{bno055_8py_a0fdb03d8fce0725ebbd832ac166942a0}} 
+{\bfseries bno055.\+imu} = B\+N\+O055(0x28)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a class for obtaining angular data from the bno055 I\+MU module. 
+
+This file acts as a driver for the bno055 inertial measurement unit. The driver uses I2C communication to write write settings to the I\+MU and read the appropriate registers. For this application we are setting the I\+MU to the N\+D\+OF fustion mode and retreiving the eularian pitch and roll values in radians. 

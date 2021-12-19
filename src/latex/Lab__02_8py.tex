@@ -1,0 +1,113 @@
+\hypertarget{Lab__02_8py}{}\doxysection{Lab\+\_\+02.\+py File Reference}
+\label{Lab__02_8py}\index{Lab\_02.py@{Lab\_02.py}}
+
+
+This file runs a Think Fast game on the nucleo.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{Lab__02_8py_a4b1648b90b5cac9f80be4cc76b23e6e7}{Lab\+\_\+02.\+User\+Interrupt}} (pin)
+\begin{DoxyCompactList}\small\item\em This is the callback function for the user button press. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{Lab__02_8py_a2b2e8737fad98b0f5af5223e4c5f76dc}{Lab\+\_\+02.\+Calc\+Avg}} (time, timer)
+\begin{DoxyCompactList}\small\item\em This function converts timer output to seconds. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{Lab__02_8py_a0b8968ae43d09848a7235b8d036c7d01}{Lab\+\_\+02.\+Return\+Results}} (timer)
+\begin{DoxyCompactList}\small\item\em This function prints the users performance results. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{Lab__02_8py_af5e63c7e9e7f8f30253b40eadd39f56e}{Lab\+\_\+02.\+Timer\+Callback}} (timer)
+\begin{DoxyCompactList}\small\item\em This is the callback function in case of timer overflow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Lab__02_8py_ab5f171efb9fbfbd84f64f5783ceee135}\label{Lab__02_8py_ab5f171efb9fbfbd84f64f5783ceee135}} 
+\mbox{\hyperlink{Lab__02_8py_ab5f171efb9fbfbd84f64f5783ceee135}{Lab\+\_\+02.\+pin\+A5}} = pyb.\+Pin(pyb.\+Pin.\+cpu.\+A5 , pyb.\+Pin.\+O\+U\+T\+\_\+\+PP)
+\begin{DoxyCompactList}\small\item\em Setting up Nucleo L\+ED. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_a34da5f69664cd39682f1a851efc4ff89}\label{Lab__02_8py_a34da5f69664cd39682f1a851efc4ff89}} 
+int \mbox{\hyperlink{Lab__02_8py_a34da5f69664cd39682f1a851efc4ff89}{Lab\+\_\+02.\+reaction\+\_\+time}} = 0
+\begin{DoxyCompactList}\small\item\em Variable representing the reaction time of a single user attempt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_a79c24b781c1a5deea362b7c59c45d818}\label{Lab__02_8py_a79c24b781c1a5deea362b7c59c45d818}} 
+int \mbox{\hyperlink{Lab__02_8py_a79c24b781c1a5deea362b7c59c45d818}{Lab\+\_\+02.\+total\+\_\+reaction\+\_\+time}} = 0
+\begin{DoxyCompactList}\small\item\em Variable representing sum of all reaction times. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_a081669171f567e7abf6a3badb5dd75e8}\label{Lab__02_8py_a081669171f567e7abf6a3badb5dd75e8}} 
+int \mbox{\hyperlink{Lab__02_8py_a081669171f567e7abf6a3badb5dd75e8}{Lab\+\_\+02.\+attempts}} = 0
+\begin{DoxyCompactList}\small\item\em Variable representing the number of game attempts by user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_a31567f9a0b7399f16b99dcaa8be66946}\label{Lab__02_8py_a31567f9a0b7399f16b99dcaa8be66946}} 
+\mbox{\hyperlink{Lab__02_8py_a31567f9a0b7399f16b99dcaa8be66946}{Lab\+\_\+02.\+Interrupt\+\_\+\+Button}} = pyb.\+Ext\+Int(pyb.\+Pin.\+board.\+P\+C13, pyb.\+Ext\+Int.\+I\+R\+Q\+\_\+\+R\+I\+S\+I\+NG, pyb.\+Pin.\+P\+U\+L\+L\+\_\+\+UP, User\+Interrupt)
+\begin{DoxyCompactList}\small\item\em Defining nucleo user input button as external interrupt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_af1417f18d19fa6f6c5acdbe6c41e699c}\label{Lab__02_8py_af1417f18d19fa6f6c5acdbe6c41e699c}} 
+bool \mbox{\hyperlink{Lab__02_8py_af1417f18d19fa6f6c5acdbe6c41e699c}{Lab\+\_\+02.\+input\+\_\+status}} = True
+\begin{DoxyCompactList}\small\item\em Tracks if the user has pressed the input button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_a1c4027b1d2917bc4037bb0386b94fb42}\label{Lab__02_8py_a1c4027b1d2917bc4037bb0386b94fb42}} 
+\mbox{\hyperlink{Lab__02_8py_a1c4027b1d2917bc4037bb0386b94fb42}{Lab\+\_\+02.\+sleep\+\_\+time}} = urandom.\+randint(int(2e6) , int(3e6))
+\begin{DoxyCompactList}\small\item\em Variable representing random time between 2 and 3 seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__02_8py_a6c0d16036c06684269a1377594bee322}\label{Lab__02_8py_a6c0d16036c06684269a1377594bee322}} 
+{\bfseries Lab\+\_\+02.\+button\+\_\+timer} = pyb.\+Timer(2 , period = int(pyb.\+freq()\mbox{[}2\mbox{]})-\/1 , prescaler = 0 , callback = Timer\+Callback)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file runs a Think Fast game on the nucleo. 
+
+This program prompts the user to press a button on the nucleo after they have seen an L\+ED turn on. The program makes use of an external interrupt(the button) to break a while loop and collect data on every user input. If either the user presses ctrl-\/c or waits too long after an L\+ED flash, the program prints the users average response time based on all of their attempts. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Lab__02_8py_a2b2e8737fad98b0f5af5223e4c5f76dc}\label{Lab__02_8py_a2b2e8737fad98b0f5af5223e4c5f76dc}} 
+\index{Lab\_02.py@{Lab\_02.py}!CalcAvg@{CalcAvg}}
+\index{CalcAvg@{CalcAvg}!Lab\_02.py@{Lab\_02.py}}
+\doxysubsubsection{\texorpdfstring{CalcAvg()}{CalcAvg()}}
+{\footnotesize\ttfamily def Lab\+\_\+02.\+Calc\+Avg (\begin{DoxyParamCaption}\item[{}]{time,  }\item[{}]{timer }\end{DoxyParamCaption})}
+
+
+
+This function converts timer output to seconds. 
+
+The nucleo timer responds in counts, so this function converts the timer counts to seconds by dividing by the frequency and period. 
+\begin{DoxyParams}{Parameters}
+{\em time} & The amount of time to be converted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Lab__02_8py_a0b8968ae43d09848a7235b8d036c7d01}\label{Lab__02_8py_a0b8968ae43d09848a7235b8d036c7d01}} 
+\index{Lab\_02.py@{Lab\_02.py}!ReturnResults@{ReturnResults}}
+\index{ReturnResults@{ReturnResults}!Lab\_02.py@{Lab\_02.py}}
+\doxysubsubsection{\texorpdfstring{ReturnResults()}{ReturnResults()}}
+{\footnotesize\ttfamily def Lab\+\_\+02.\+Return\+Results (\begin{DoxyParamCaption}\item[{}]{timer }\end{DoxyParamCaption})}
+
+
+
+This function prints the users performance results. 
+
+After either pressing ctrl-\/c or waiting too long on an attempt, this function then provides the user with their performance data. Assuming the user made at least one attempt it will print the average reaction time, otherwise it will print N/A. This function then deactivates the timer and interrupt button, and turns the L\+ED off. 
+\begin{DoxyParams}{Parameters}
+{\em timer} & This fulfills the parameter requirement. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Lab__02_8py_af5e63c7e9e7f8f30253b40eadd39f56e}\label{Lab__02_8py_af5e63c7e9e7f8f30253b40eadd39f56e}} 
+\index{Lab\_02.py@{Lab\_02.py}!TimerCallback@{TimerCallback}}
+\index{TimerCallback@{TimerCallback}!Lab\_02.py@{Lab\_02.py}}
+\doxysubsubsection{\texorpdfstring{TimerCallback()}{TimerCallback()}}
+{\footnotesize\ttfamily def Lab\+\_\+02.\+Timer\+Callback (\begin{DoxyParamCaption}\item[{}]{timer }\end{DoxyParamCaption})}
+
+
+
+This is the callback function in case of timer overflow. 
+
+The timer is set up such that it overflows at 1 second which runs this function. This overflow function changes the input status parameter to False and prints Too Slow. Ultimately this leads the program to print results and end. 
+\begin{DoxyParams}{Parameters}
+{\em timer} & Unused parameter to fulfill callback parameter requirement. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Lab__02_8py_a4b1648b90b5cac9f80be4cc76b23e6e7}\label{Lab__02_8py_a4b1648b90b5cac9f80be4cc76b23e6e7}} 
+\index{Lab\_02.py@{Lab\_02.py}!UserInterrupt@{UserInterrupt}}
+\index{UserInterrupt@{UserInterrupt}!Lab\_02.py@{Lab\_02.py}}
+\doxysubsubsection{\texorpdfstring{UserInterrupt()}{UserInterrupt()}}
+{\footnotesize\ttfamily def Lab\+\_\+02.\+User\+Interrupt (\begin{DoxyParamCaption}\item[{}]{pin }\end{DoxyParamCaption})}
+
+
+
+This is the callback function for the user button press. 
+
+This function runs on every button press and collects data on the user\textquotesingle{}s performance. This function updates both the total response time and number of attempts which are ultimately used to calculate the users average response time. 
+\begin{DoxyParams}{Parameters}
+{\em pin} & This fulfills the parameter requirement of the callback fcn. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,63 @@
+\hypertarget{Lab__01_8py}{}\doxysection{Lab\+\_\+01.\+py File Reference}
+\label{Lab__01_8py}\index{Lab\_01.py@{Lab\_01.py}}
+
+
+This lab simulates the Vendotron machine.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Lab__01_8py_ac365d1eec2d0bf4c2e82444a07664833}\label{Lab__01_8py_ac365d1eec2d0bf4c2e82444a07664833}} 
+def \mbox{\hyperlink{Lab__01_8py_ac365d1eec2d0bf4c2e82444a07664833}{Lab\+\_\+01.\+on\+\_\+keypress}} (key)
+\begin{DoxyCompactList}\small\item\em Callback function which is called when a key has been pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Lab__01_8py_adf2502d666b26b7835adb0d60df6a054}\label{Lab__01_8py_adf2502d666b26b7835adb0d60df6a054}} 
+int {\bfseries Lab\+\_\+01.\+change} = 0
+\item 
+\mbox{\Hypertarget{Lab__01_8py_ad73115a213f232ae86ed95f6ba4bc4b8}\label{Lab__01_8py_ad73115a213f232ae86ed95f6ba4bc4b8}} 
+int {\bfseries Lab\+\_\+01.\+order} = 0
+\item 
+\mbox{\Hypertarget{Lab__01_8py_a825c899f458479816e7abc6800fbf041}\label{Lab__01_8py_a825c899f458479816e7abc6800fbf041}} 
+int {\bfseries Lab\+\_\+01.\+state} = 0
+\item 
+\mbox{\Hypertarget{Lab__01_8py_a12c2abbb4fa4f833aecb0655236afe44}\label{Lab__01_8py_a12c2abbb4fa4f833aecb0655236afe44}} 
+{\bfseries Lab\+\_\+01.\+last\+\_\+key} = None
+\item 
+\mbox{\Hypertarget{Lab__01_8py_aba242e6da7392cbd955446aacc71461a}\label{Lab__01_8py_aba242e6da7392cbd955446aacc71461a}} 
+\mbox{\hyperlink{Lab__01_8py_aba242e6da7392cbd955446aacc71461a}{Lab\+\_\+01.\+twenty}} = math.\+floor(change/(20$\ast$100))
+\begin{DoxyCompactList}\small\item\em Variable defining number of twenties to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_af375607af46cdebce7ddb8f5801c9ee0}\label{Lab__01_8py_af375607af46cdebce7ddb8f5801c9ee0}} 
+\mbox{\hyperlink{Lab__01_8py_af375607af46cdebce7ddb8f5801c9ee0}{Lab\+\_\+01.\+ten}} = math.\+floor(change/(10$\ast$100))
+\begin{DoxyCompactList}\small\item\em Variable defining number of tens to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_a4079e1fc643a76535421eac64f7fb853}\label{Lab__01_8py_a4079e1fc643a76535421eac64f7fb853}} 
+\mbox{\hyperlink{Lab__01_8py_a4079e1fc643a76535421eac64f7fb853}{Lab\+\_\+01.\+five}} = math.\+floor(change/(5$\ast$100))
+\begin{DoxyCompactList}\small\item\em Variable defining number of fives to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_af3261ebd82eef9de2845400150d65a1f}\label{Lab__01_8py_af3261ebd82eef9de2845400150d65a1f}} 
+\mbox{\hyperlink{Lab__01_8py_af3261ebd82eef9de2845400150d65a1f}{Lab\+\_\+01.\+one}} = math.\+floor(change/(100))
+\begin{DoxyCompactList}\small\item\em Variable defining number of ones to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_af95eb94d7dc30737f8dbb941f1139e69}\label{Lab__01_8py_af95eb94d7dc30737f8dbb941f1139e69}} 
+\mbox{\hyperlink{Lab__01_8py_af95eb94d7dc30737f8dbb941f1139e69}{Lab\+\_\+01.\+quarter}} = math.\+floor(change/(25))
+\begin{DoxyCompactList}\small\item\em Variable defining number of quarters to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_ad0b43d9f9dd615b5da37af1eb8488755}\label{Lab__01_8py_ad0b43d9f9dd615b5da37af1eb8488755}} 
+\mbox{\hyperlink{Lab__01_8py_ad0b43d9f9dd615b5da37af1eb8488755}{Lab\+\_\+01.\+dime}} = math.\+floor(change/(10))
+\begin{DoxyCompactList}\small\item\em Variable defining number of dimes to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_ab33c4349ac00ad96b78e7e5cab31f837}\label{Lab__01_8py_ab33c4349ac00ad96b78e7e5cab31f837}} 
+\mbox{\hyperlink{Lab__01_8py_ab33c4349ac00ad96b78e7e5cab31f837}{Lab\+\_\+01.\+nickel}} = math.\+floor(change/(5))
+\begin{DoxyCompactList}\small\item\em Variable defining number of nickels to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_a6d7a4f5bc82d47145d38a06a76745123}\label{Lab__01_8py_a6d7a4f5bc82d47145d38a06a76745123}} 
+\mbox{\hyperlink{Lab__01_8py_a6d7a4f5bc82d47145d38a06a76745123}{Lab\+\_\+01.\+penny}} = math.\+floor(change)
+\begin{DoxyCompactList}\small\item\em Variable defining number of pennies to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__01_8py_aed4e98b249d5bdbce86a5f010136f029}\label{Lab__01_8py_aed4e98b249d5bdbce86a5f010136f029}} 
+tuple {\bfseries Lab\+\_\+01.\+change\+\_\+tuple} = (penny , nickel , dime , quarter , one , five , ten , twenty)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This lab simulates the Vendotron machine. 
+
+A finite state machine first requests that the user input change using number keys 0 -\/ 7, and at any point the user can request one of the four drinks by inputting the appropriate letter. The F\+SM then checks that the inputted funds are sufficient and either asks for more money or dispenses the requested drink. The machine then initializes again and prints the welcome message.
+
+ 

@@ -1,0 +1,49 @@
+\hypertarget{Lab__04__Main_8py}{}\doxysection{Lab\+\_\+04\+\_\+\+Main.\+py File Reference}
+\label{Lab__04__Main_8py}\index{Lab\_04\_Main.py@{Lab\_04\_Main.py}}
+
+
+This file manages adding collected temperature data to the csv.  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a99cf9c4ecedb20d2467e82e84b7f9835}\label{Lab__04__Main_8py_a99cf9c4ecedb20d2467e82e84b7f9835}} 
+\mbox{\hyperlink{Lab__04__Main_8py_a99cf9c4ecedb20d2467e82e84b7f9835}{Lab\+\_\+04\+\_\+\+Main.\+stm\+\_\+temp}} = pyb.\+A\+D\+C\+All(12 , 0x70000)
+\begin{DoxyCompactList}\small\item\em Variable representing Nucleo temperature pin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a7127a40a80be24db1b370cbed62bb6d9}\label{Lab__04__Main_8py_a7127a40a80be24db1b370cbed62bb6d9}} 
+int \mbox{\hyperlink{Lab__04__Main_8py_a7127a40a80be24db1b370cbed62bb6d9}{Lab\+\_\+04\+\_\+\+Main.\+interval}} = 60000
+\begin{DoxyCompactList}\small\item\em Variable representing the interval between temp recordings in milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_abb868b9cc9ab1cd03c099bc6a4478909}\label{Lab__04__Main_8py_abb868b9cc9ab1cd03c099bc6a4478909}} 
+\mbox{\hyperlink{Lab__04__Main_8py_abb868b9cc9ab1cd03c099bc6a4478909}{Lab\+\_\+04\+\_\+\+Main.\+start\+\_\+time}} = utime.\+ticks\+\_\+ms()
+\begin{DoxyCompactList}\small\item\em Variable representing the initial time used for zeroing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a7f8c1b1117381e5038eafddb0675367b}\label{Lab__04__Main_8py_a7f8c1b1117381e5038eafddb0675367b}} 
+int \mbox{\hyperlink{Lab__04__Main_8py_a7f8c1b1117381e5038eafddb0675367b}{Lab\+\_\+04\+\_\+\+Main.\+next\+\_\+time}} = start\+\_\+time + interval
+\begin{DoxyCompactList}\small\item\em Variable representing the next time that loop should run. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a238b5383f24a53c1f26ffe36d947b3f8}\label{Lab__04__Main_8py_a238b5383f24a53c1f26ffe36d947b3f8}} 
+int \mbox{\hyperlink{Lab__04__Main_8py_a238b5383f24a53c1f26ffe36d947b3f8}{Lab\+\_\+04\+\_\+\+Main.\+total\+\_\+time}} = 28800000
+\begin{DoxyCompactList}\small\item\em Variable representing the total length of data collection in milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a39bf6b9059c1a3c5e5b50b27f7010c10}\label{Lab__04__Main_8py_a39bf6b9059c1a3c5e5b50b27f7010c10}} 
+int \mbox{\hyperlink{Lab__04__Main_8py_a39bf6b9059c1a3c5e5b50b27f7010c10}{Lab\+\_\+04\+\_\+\+Main.\+points}} = 0
+\begin{DoxyCompactList}\small\item\em Variable tracking the number of data points collected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_aa1ab6a69def04348164270122a987d74}\label{Lab__04__Main_8py_aa1ab6a69def04348164270122a987d74}} 
+\mbox{\hyperlink{Lab__04__Main_8py_aa1ab6a69def04348164270122a987d74}{Lab\+\_\+04\+\_\+\+Main.\+mcp}} = mcp9808(24)
+\begin{DoxyCompactList}\small\item\em Define the temperature sensor object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_ac349b94161730a32cdadb079fb4216c3}\label{Lab__04__Main_8py_ac349b94161730a32cdadb079fb4216c3}} 
+\mbox{\hyperlink{Lab__04__Main_8py_ac349b94161730a32cdadb079fb4216c3}{Lab\+\_\+04\+\_\+\+Main.\+current\+\_\+time}} = utime.\+ticks\+\_\+ms()
+\begin{DoxyCompactList}\small\item\em Variable representing the current time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a660b7bb169346a324fb524994658066f}\label{Lab__04__Main_8py_a660b7bb169346a324fb524994658066f}} 
+\mbox{\hyperlink{Lab__04__Main_8py_a660b7bb169346a324fb524994658066f}{Lab\+\_\+04\+\_\+\+Main.\+time}} = str(current\+\_\+time -\/ start\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Zeroed current time to be added to data file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_ad107be4eb87b200aa6bf253abf39ad3f}\label{Lab__04__Main_8py_ad107be4eb87b200aa6bf253abf39ad3f}} 
+\mbox{\hyperlink{Lab__04__Main_8py_ad107be4eb87b200aa6bf253abf39ad3f}{Lab\+\_\+04\+\_\+\+Main.\+S\+T\+M\+\_\+\+Temp}} = str(stm\+\_\+temp.\+read\+\_\+core\+\_\+temp())
+\begin{DoxyCompactList}\small\item\em Current Nucleo temprature reading to be added to data file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__04__Main_8py_a8f72dd7d6e6a784cbe61faa9c5b5c4d4}\label{Lab__04__Main_8py_a8f72dd7d6e6a784cbe61faa9c5b5c4d4}} 
+\mbox{\hyperlink{Lab__04__Main_8py_a8f72dd7d6e6a784cbe61faa9c5b5c4d4}{Lab\+\_\+04\+\_\+\+Main.\+M\+C\+P\+\_\+\+Temp}} = str(mcp.\+celsius())
+\begin{DoxyCompactList}\small\item\em Current M\+C\+P9808 temperature reading to add to data file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file manages adding collected temperature data to the csv. 
+
+This file first imports the mcp9808 temperature sensor driver which it initializes with the correct address. Time variables are then set up to allow a while loop to collect data at a desired rate over a desired period of time. The current definitions will collect data every minute for eight hours. Using the with loop the desired csv file is opened, and the while loop runs until eight hours of data from both the mcp9808 and on board temperature sensor have been added.  

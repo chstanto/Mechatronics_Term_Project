@@ -1,0 +1,97 @@
+\hypertarget{classMotor__Driver_1_1MotorDriver}{}\doxysection{Motor\+\_\+\+Driver.\+Motor\+Driver Class Reference}
+\label{classMotor__Driver_1_1MotorDriver}\index{Motor\_Driver.MotorDriver@{Motor\_Driver.MotorDriver}}
+
+
+Sets up methods required to control a motor.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classMotor__Driver_1_1MotorDriver_a0f77e4b0cfba67a11558e2be013fc8b7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, timer, n\+S\+L\+E\+E\+P\+\_\+pin, I\+N1\+\_\+pin, I\+N2\+\_\+pin, channel\+\_\+A, channel\+\_\+B)
+\begin{DoxyCompactList}\small\item\em Sets up pins and timers for two motors (1 and 2). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_af6576759bd1844dc919e0f3e7ca9c1f9}\label{classMotor__Driver_1_1MotorDriver_af6576759bd1844dc919e0f3e7ca9c1f9}} 
+def \mbox{\hyperlink{classMotor__Driver_1_1MotorDriver_af6576759bd1844dc919e0f3e7ca9c1f9}{enable}} (self)
+\begin{DoxyCompactList}\small\item\em Sets the motors enable pin to high, allowing operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_abd4507fc3fdac3fc9a10b2d6fa7c6608}\label{classMotor__Driver_1_1MotorDriver_abd4507fc3fdac3fc9a10b2d6fa7c6608}} 
+def \mbox{\hyperlink{classMotor__Driver_1_1MotorDriver_abd4507fc3fdac3fc9a10b2d6fa7c6608}{disable}} (self)
+\begin{DoxyCompactList}\small\item\em Sets the motors enable pin to low, disabling operation. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classMotor__Driver_1_1MotorDriver_a6900ec5e218f96f0bb2386dccf8a6c3e}{set\+\_\+duty}} (self, duty)
+\begin{DoxyCompactList}\small\item\em Adjusts the motors duty cycle based on input parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a24b0ad92a63231266052b137a5675927}\label{classMotor__Driver_1_1MotorDriver_a24b0ad92a63231266052b137a5675927}} 
+{\bfseries enable\+\_\+pin}
+\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a9a024899e6cd8d89872cb82b1525d101}\label{classMotor__Driver_1_1MotorDriver_a9a024899e6cd8d89872cb82b1525d101}} 
+{\bfseries M1\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_ad429872039875533bdbc1fc5ea155b25}\label{classMotor__Driver_1_1MotorDriver_ad429872039875533bdbc1fc5ea155b25}} 
+{\bfseries M1\+\_\+neg}
+\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a4cd2d17a21845c86d2817afd049f0038}\label{classMotor__Driver_1_1MotorDriver_a4cd2d17a21845c86d2817afd049f0038}} 
+{\bfseries timer1}
+\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a2796c37bcc7e352fe6a58117d8793a8b}\label{classMotor__Driver_1_1MotorDriver_a2796c37bcc7e352fe6a58117d8793a8b}} 
+{\bfseries M1\+C\+H1}
+\item 
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a9877bc356dc951ec3544b8cd2e455fa2}\label{classMotor__Driver_1_1MotorDriver_a9877bc356dc951ec3544b8cd2e455fa2}} 
+{\bfseries M1\+C\+H2}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sets up methods required to control a motor. 
+
+The Motor Driver class allows the user to set up two motors using the {\bfseries{init}} method. This method assigns the appropriate pins, timers, and channels required by the motors. The class also includes the enable and disable methods which set the motors enable pin either to high or low. Finally the set duty method allows the user to input a desired motor duty cycle after it has been enabled. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a0f77e4b0cfba67a11558e2be013fc8b7}\label{classMotor__Driver_1_1MotorDriver_a0f77e4b0cfba67a11558e2be013fc8b7}} 
+\index{Motor\_Driver.MotorDriver@{Motor\_Driver.MotorDriver}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Motor\_Driver.MotorDriver@{Motor\_Driver.MotorDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Motor\+\_\+\+Driver.\+Motor\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{timer,  }\item[{}]{n\+S\+L\+E\+E\+P\+\_\+pin,  }\item[{}]{I\+N1\+\_\+pin,  }\item[{}]{I\+N2\+\_\+pin,  }\item[{}]{channel\+\_\+A,  }\item[{}]{channel\+\_\+B }\end{DoxyParamCaption})}
+
+
+
+Sets up pins and timers for two motors (1 and 2). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & A timer object used P\+WM generation on inputs 1,2. @parram n\+S\+L\+E\+E\+P\+\_\+pin A pin object used to define enable pin. \\
+\hline
+{\em I\+N1\+\_\+pin} & A pin object used to define half bridge input 1. \\
+\hline
+{\em I\+N2\+\_\+pin} & A pin object used to define half bridge input 2. \\
+\hline
+{\em timer} & A timer object used P\+WM generation on inputs 1,2. \\
+\hline
+{\em channel\+\_\+A} & Defines the channel for the I\+N1 pin \\
+\hline
+{\em channel\+\_\+B} & Defines the channel for the I\+N2 pin \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMotor__Driver_1_1MotorDriver_a6900ec5e218f96f0bb2386dccf8a6c3e}\label{classMotor__Driver_1_1MotorDriver_a6900ec5e218f96f0bb2386dccf8a6c3e}} 
+\index{Motor\_Driver.MotorDriver@{Motor\_Driver.MotorDriver}!set\_duty@{set\_duty}}
+\index{set\_duty@{set\_duty}!Motor\_Driver.MotorDriver@{Motor\_Driver.MotorDriver}}
+\doxysubsubsection{\texorpdfstring{set\_duty()}{set\_duty()}}
+{\footnotesize\ttfamily def Motor\+\_\+\+Driver.\+Motor\+Driver.\+set\+\_\+duty (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{duty }\end{DoxyParamCaption})}
+
+
+
+Adjusts the motors duty cycle based on input parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty} & A signed integer holding P\+WM signal duty cycle. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Motor__Driver_8py}{Motor\+\_\+\+Driver.\+py}}\end{DoxyCompactItemize}

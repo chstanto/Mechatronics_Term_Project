@@ -1,0 +1,48 @@
+\hypertarget{Touch__Panel__Driver_8py}{}\doxysection{Touch\+\_\+\+Panel\+\_\+\+Driver.\+py File Reference}
+\label{Touch__Panel__Driver_8py}\index{Touch\_Panel\_Driver.py@{Touch\_Panel\_Driver.py}}
+
+
+This driver allows the nucleo to gather position data from the touch panel.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTouch__Panel__Driver_1_1Touch__Panel}{Touch\+\_\+\+Panel\+\_\+\+Driver.\+Touch\+\_\+\+Panel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_a52e283ecdf87da7796820bf6a23dd5d6}\label{Touch__Panel__Driver_8py_a52e283ecdf87da7796820bf6a23dd5d6}} 
+{\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+xm} = pyb.\+Pin.\+cpu.\+A1
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_a228677757060093139868132fdb64794}\label{Touch__Panel__Driver_8py_a228677757060093139868132fdb64794}} 
+{\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+xp} = pyb.\+Pin.\+cpu.\+A7
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_a3c26be5955c6210feea7285fdd753101}\label{Touch__Panel__Driver_8py_a3c26be5955c6210feea7285fdd753101}} 
+{\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+ym} = pyb.\+Pin.\+cpu.\+A0
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_af5c6ccd74f6d6a05181ddc1098af08d9}\label{Touch__Panel__Driver_8py_af5c6ccd74f6d6a05181ddc1098af08d9}} 
+{\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+yp} = pyb.\+Pin.\+cpu.\+A6
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_ad7159d656bed7682386d21e7f346ff59}\label{Touch__Panel__Driver_8py_ad7159d656bed7682386d21e7f346ff59}} 
+{\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+TP} = Touch\+\_\+\+Panel(xp, xm, yp, ym, 180, 100, 90, 50)
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_aa415fe054fd2fb981fa0a4bff604ad89}\label{Touch__Panel__Driver_8py_aa415fe054fd2fb981fa0a4bff604ad89}} 
+{\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+init\+\_\+time} = utime.\+ticks\+\_\+us()
+\item 
+\mbox{\Hypertarget{Touch__Panel__Driver_8py_a9a1ac3f04724e6adc87ddeac0b475aa8}\label{Touch__Panel__Driver_8py_a9a1ac3f04724e6adc87ddeac0b475aa8}} 
+int {\bfseries Touch\+\_\+\+Panel\+\_\+\+Driver.\+runs} = 100
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This driver allows the nucleo to gather position data from the touch panel. 
+
+This file defines the Touch\+\_\+\+Panel class which has five methods. Methods include init, Scan\+\_\+x, Scan\+\_\+y, Scan\+\_\+z, and get\+\_\+pos. By using the provided methods the user can determine if anything is in contact with the touch panel and the location of that contact. The image below shows the wiring and soldering setup of the touch panel used when testing for this driver.
+
+
+
+The image below shows the average time to use the get\+\_\+pos method after looping it 100 times. Testing code was written at the bottom of the program to generate this data.
+
+ 

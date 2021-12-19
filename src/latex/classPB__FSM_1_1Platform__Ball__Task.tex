@@ -1,0 +1,152 @@
+\hypertarget{classPB__FSM_1_1Platform__Ball__Task}{}\doxysection{P\+B\+\_\+\+F\+S\+M.\+Platform\+\_\+\+Ball\+\_\+\+Task Class Reference}
+\label{classPB__FSM_1_1Platform__Ball__Task}\index{PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a45b6b54c2a51360fa69966983f991a1b}{Fault\+\_\+\+Detection}} (self, pin)
+\begin{DoxyCompactList}\small\item\em This method manages fault and prevents danger to user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_afe826936ca2674d59fffe25adf3a943e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a128e80f121e7dcf6a531ddb7ce10b4ee}{interval}})
+\begin{DoxyCompactList}\small\item\em Defines variables and objects needed for F\+SM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a9ec0ef079cbfc6d419c134d269148e70}\label{classPB__FSM_1_1Platform__Ball__Task_a9ec0ef079cbfc6d419c134d269148e70}} 
+def \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a9ec0ef079cbfc6d419c134d269148e70}{run}} (self)
+\begin{DoxyCompactList}\small\item\em Runs one iteration of the platform ball task. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a523084a777b9d93bc858ebde30f20125}{transition\+To}} (self, new\+State)
+\begin{DoxyCompactList}\small\item\em Sets new state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_adc3b9c80a24b3322606adb04676da740}\label{classPB__FSM_1_1Platform__Ball__Task_adc3b9c80a24b3322606adb04676da740}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_adc3b9c80a24b3322606adb04676da740}{state}}
+\begin{DoxyCompactList}\small\item\em The state to run on the next iteration of the task. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a128e80f121e7dcf6a531ddb7ce10b4ee}\label{classPB__FSM_1_1Platform__Ball__Task_a128e80f121e7dcf6a531ddb7ce10b4ee}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a128e80f121e7dcf6a531ddb7ce10b4ee}{interval}}
+\begin{DoxyCompactList}\small\item\em The amount of time in microseconds between runs of the task. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a5bde0d82019c8afdcc3d75e25b10e3b7}\label{classPB__FSM_1_1Platform__Ball__Task_a5bde0d82019c8afdcc3d75e25b10e3b7}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a5bde0d82019c8afdcc3d75e25b10e3b7}{start\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em The timestamp for the first iteration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a5033d2da20ac4d56048fa88f35a23030}\label{classPB__FSM_1_1Platform__Ball__Task_a5033d2da20ac4d56048fa88f35a23030}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a5033d2da20ac4d56048fa88f35a23030}{next\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em The \char`\"{}timestamp\char`\"{} for when the task should run next. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_ab17b1a328bf0c645f4d10d5559ca0fde}{User\+\_\+\+Button}}
+\begin{DoxyCompactList}\small\item\em Defining nucleo user input button as external interrupt self.\+Fault\+\_\+\+Interrupt = pyb.\+Ext\+Int(pyb.\+Pin.\+board.\+P\+B2, pyb.\+Ext\+Int.\+I\+R\+Q\+\_\+\+F\+A\+L\+L\+I\+NG, pyb.\+Pin.\+P\+U\+L\+L\+\_\+\+UP, self.\+Fault\+\_\+\+Detection) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a398fb3114e712c556c91522a0fdb4aa4}\label{classPB__FSM_1_1Platform__Ball__Task_a398fb3114e712c556c91522a0fdb4aa4}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a398fb3114e712c556c91522a0fdb4aa4}{mot1}}
+\begin{DoxyCompactList}\small\item\em Define motor 2, controls rotation about X axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_ae1c14bb91819d22e894efad5078b00a7}\label{classPB__FSM_1_1Platform__Ball__Task_ae1c14bb91819d22e894efad5078b00a7}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_ae1c14bb91819d22e894efad5078b00a7}{mot2}}
+\begin{DoxyCompactList}\small\item\em Define motor 1, controls rotation about Y axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a7014b65264ffc018c13cc89932fb3b0e}\label{classPB__FSM_1_1Platform__Ball__Task_a7014b65264ffc018c13cc89932fb3b0e}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a7014b65264ffc018c13cc89932fb3b0e}{Touch\+\_\+\+Panel}}
+\begin{DoxyCompactList}\small\item\em Define touch panel driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_afec484f7608c009c0fda242161915243}\label{classPB__FSM_1_1Platform__Ball__Task_afec484f7608c009c0fda242161915243}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_afec484f7608c009c0fda242161915243}{Platform}}
+\begin{DoxyCompactList}\small\item\em Define Initialized Platform Controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a88a4bb8c1bbacea4c66b9067e3423304}\label{classPB__FSM_1_1Platform__Ball__Task_a88a4bb8c1bbacea4c66b9067e3423304}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a88a4bb8c1bbacea4c66b9067e3423304}{Platform\+\_\+\+Ball}}
+\begin{DoxyCompactList}\small\item\em Define Initialized Platform and Ball Controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_ad35ab3b49c12a0d4e423d880bdb7e56e}\label{classPB__FSM_1_1Platform__Ball__Task_ad35ab3b49c12a0d4e423d880bdb7e56e}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_ad35ab3b49c12a0d4e423d880bdb7e56e}{I\+MU}}
+\begin{DoxyCompactList}\small\item\em Define B\+N\+O055 sensor object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_ad972cdf9f0caa1d46e132e9db9d25656}\label{classPB__FSM_1_1Platform__Ball__Task_ad972cdf9f0caa1d46e132e9db9d25656}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_ad972cdf9f0caa1d46e132e9db9d25656}{pos\+\_\+X}}
+\begin{DoxyCompactList}\small\item\em Variable storing two most recent X contact positions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a85546a212f40fe5267034eb21033f848}\label{classPB__FSM_1_1Platform__Ball__Task_a85546a212f40fe5267034eb21033f848}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a85546a212f40fe5267034eb21033f848}{pos\+\_\+Y}}
+\begin{DoxyCompactList}\small\item\em Variable storing two most recent Y contact positions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a562f6456a333d3ad803373bd21332cf8}\label{classPB__FSM_1_1Platform__Ball__Task_a562f6456a333d3ad803373bd21332cf8}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a562f6456a333d3ad803373bd21332cf8}{theta\+\_\+X}}
+\begin{DoxyCompactList}\small\item\em Variable storing two most recent angles about X. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a451134029401e67bf6430c208c7ec254}\label{classPB__FSM_1_1Platform__Ball__Task_a451134029401e67bf6430c208c7ec254}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a451134029401e67bf6430c208c7ec254}{theta\+\_\+Y}}
+\begin{DoxyCompactList}\small\item\em Variable storing two most recent angles about Y. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a1a9a36dafea78be3733b0d6549fcd44c}\label{classPB__FSM_1_1Platform__Ball__Task_a1a9a36dafea78be3733b0d6549fcd44c}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a1a9a36dafea78be3733b0d6549fcd44c}{runs}}
+\begin{DoxyCompactList}\small\item\em Variable storing number of loops through Platform/\+Ball control. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a673641f3b4c4ce1cbc12b38950726181}\label{classPB__FSM_1_1Platform__Ball__Task_a673641f3b4c4ce1cbc12b38950726181}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a673641f3b4c4ce1cbc12b38950726181}{curr\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Updates current time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a2584cce82c7c4d684f687ddd8b8bdca0}\label{classPB__FSM_1_1Platform__Ball__Task_a2584cce82c7c4d684f687ddd8b8bdca0}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a2584cce82c7c4d684f687ddd8b8bdca0}{Touch\+\_\+\+Data}}
+\begin{DoxyCompactList}\small\item\em Variable storing current touch panel data for each loop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a8c2d269bf4f68e1b2e5d04fe0585a30e}\label{classPB__FSM_1_1Platform__Ball__Task_a8c2d269bf4f68e1b2e5d04fe0585a30e}} 
+\mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a8c2d269bf4f68e1b2e5d04fe0585a30e}{I\+M\+U\+\_\+\+Data}}
+\begin{DoxyCompactList}\small\item\em Variable storing current I\+MU sensor data for each loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a9dc62f585231771657e624a232547375}\label{classPB__FSM_1_1Platform__Ball__Task_a9dc62f585231771657e624a232547375}} 
+int \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a9dc62f585231771657e624a232547375}{S0\+\_\+\+I\+N\+IT}} = 0
+\begin{DoxyCompactList}\small\item\em Constant defining state 0 -\/ Initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_ac6b8f3840aaea0fbd464ffab261abf2d}\label{classPB__FSM_1_1Platform__Ball__Task_ac6b8f3840aaea0fbd464ffab261abf2d}} 
+int \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_ac6b8f3840aaea0fbd464ffab261abf2d}{S1\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+Z\+E\+RO}} = 1
+\begin{DoxyCompactList}\small\item\em Constant defining state 1 -\/ Zero the Platform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a949f9f57bb499e450b6bb67f7f9381b1}\label{classPB__FSM_1_1Platform__Ball__Task_a949f9f57bb499e450b6bb67f7f9381b1}} 
+int \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a949f9f57bb499e450b6bb67f7f9381b1}{S2\+\_\+\+B\+A\+L\+A\+N\+CE}} = 2
+\begin{DoxyCompactList}\small\item\em Constant defining state 2 -\/ Balance the Ball. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a13dd50c9444240b5fc90115288002823}\label{classPB__FSM_1_1Platform__Ball__Task_a13dd50c9444240b5fc90115288002823}} 
+int \mbox{\hyperlink{classPB__FSM_1_1Platform__Ball__Task_a13dd50c9444240b5fc90115288002823}{S3\+\_\+\+F\+A\+U\+LT}} = 3
+\begin{DoxyCompactList}\small\item\em Constant defining state 3 -\/ Fault Correction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_afe826936ca2674d59fffe25adf3a943e}\label{classPB__FSM_1_1Platform__Ball__Task_afe826936ca2674d59fffe25adf3a943e}} 
+\index{PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def P\+B\+\_\+\+F\+S\+M.\+Platform\+\_\+\+Ball\+\_\+\+Task.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{interval }\end{DoxyParamCaption})}
+
+
+
+Defines variables and objects needed for F\+SM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & Input for time between runs in microseconds \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a45b6b54c2a51360fa69966983f991a1b}\label{classPB__FSM_1_1Platform__Ball__Task_a45b6b54c2a51360fa69966983f991a1b}} 
+\index{PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}!Fault\_Detection@{Fault\_Detection}}
+\index{Fault\_Detection@{Fault\_Detection}!PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}}
+\doxysubsubsection{\texorpdfstring{Fault\_Detection()}{Fault\_Detection()}}
+{\footnotesize\ttfamily def P\+B\+\_\+\+F\+S\+M.\+Platform\+\_\+\+Ball\+\_\+\+Task.\+Fault\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pin }\end{DoxyParamCaption})}
+
+
+
+This method manages fault and prevents danger to user. 
+
+When this method is called by the F\+SM or external interrupt both motors are disabled and the F\+SM moves into state 3 which waits for a user input before resuming operation. \mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_a523084a777b9d93bc858ebde30f20125}\label{classPB__FSM_1_1Platform__Ball__Task_a523084a777b9d93bc858ebde30f20125}} 
+\index{PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}!transitionTo@{transitionTo}}
+\index{transitionTo@{transitionTo}!PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}}
+\doxysubsubsection{\texorpdfstring{transitionTo()}{transitionTo()}}
+{\footnotesize\ttfamily def P\+B\+\_\+\+F\+S\+M.\+Platform\+\_\+\+Ball\+\_\+\+Task.\+transition\+To (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Sets new state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & Variable representing the desired new state \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPB__FSM_1_1Platform__Ball__Task_ab17b1a328bf0c645f4d10d5559ca0fde}\label{classPB__FSM_1_1Platform__Ball__Task_ab17b1a328bf0c645f4d10d5559ca0fde}} 
+\index{PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}!User\_Button@{User\_Button}}
+\index{User\_Button@{User\_Button}!PB\_FSM.Platform\_Ball\_Task@{PB\_FSM.Platform\_Ball\_Task}}
+\doxysubsubsection{\texorpdfstring{User\_Button}{User\_Button}}
+{\footnotesize\ttfamily P\+B\+\_\+\+F\+S\+M.\+Platform\+\_\+\+Ball\+\_\+\+Task.\+User\+\_\+\+Button}
+
+
+
+Defining nucleo user input button as external interrupt self.\+Fault\+\_\+\+Interrupt = pyb.\+Ext\+Int(pyb.\+Pin.\+board.\+P\+B2, pyb.\+Ext\+Int.\+I\+R\+Q\+\_\+\+F\+A\+L\+L\+I\+NG, pyb.\+Pin.\+P\+U\+L\+L\+\_\+\+UP, self.\+Fault\+\_\+\+Detection) 
+
+Setting up Nucleo user button for fault reset 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{PB__FSM_8py}{P\+B\+\_\+\+F\+S\+M.\+py}}\end{DoxyCompactItemize}

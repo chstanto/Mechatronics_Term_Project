@@ -1,0 +1,59 @@
+\hypertarget{Lab__03__Front_8py}{}\doxysection{Lab\+\_\+03\+\_\+\+Front.\+py File Reference}
+\label{Lab__03__Front_8py}\index{Lab\_03\_Front.py@{Lab\_03\_Front.py}}
+
+
+This is the frontend of lab 3 which recieves, plots, and saves data.  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Lab__03__Front_8py_a0acc444bb4c9b7898072c20524ac8619}\label{Lab__03__Front_8py_a0acc444bb4c9b7898072c20524ac8619}} 
+{\bfseries Lab\+\_\+03\+\_\+\+Front.\+ser} = serial.\+Serial(port=\textquotesingle{}C\+O\+M3\textquotesingle{},baudrate=115273,timeout=1)
+\item 
+{\bfseries Lab\+\_\+03\+\_\+\+Front.\+inv}
+\item 
+int \mbox{\hyperlink{Lab__03__Front_8py_a9070fb4ff771de1421f6d72faaa05128}{Lab\+\_\+03\+\_\+\+Front.\+state}} = 0
+\begin{DoxyCompactList}\small\item\em Variable representing the current program state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__03__Front_8py_ad52bd403f64195d6d2ec43de0920ea65}\label{Lab__03__Front_8py_ad52bd403f64195d6d2ec43de0920ea65}} 
+list \mbox{\hyperlink{Lab__03__Front_8py_ad52bd403f64195d6d2ec43de0920ea65}{Lab\+\_\+03\+\_\+\+Front.\+data}} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variable holding the data recieved from the Nucleo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__03__Front_8py_a5fa5a95424384c166eb9e81ac500541c}\label{Lab__03__Front_8py_a5fa5a95424384c166eb9e81ac500541c}} 
+list \mbox{\hyperlink{Lab__03__Front_8py_a5fa5a95424384c166eb9e81ac500541c}{Lab\+\_\+03\+\_\+\+Front.\+voltage}} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variable representing voltage data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Lab__03__Front_8py_a0bfd386f920e7cd480a2726e6abde416}\label{Lab__03__Front_8py_a0bfd386f920e7cd480a2726e6abde416}} 
+\mbox{\hyperlink{Lab__03__Front_8py_a0bfd386f920e7cd480a2726e6abde416}{Lab\+\_\+03\+\_\+\+Front.\+time}} = numpy.\+arange(0 , 101)
+\begin{DoxyCompactList}\small\item\em Variable storing the array of time data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the frontend of lab 3 which recieves, plots, and saves data. 
+
+When run, this program first asks the user for an input. If the user provides the correct input it is sent to the backend of the lab on the Nucleo which starts the data collection. This program then waits to recieve the data via serial communication, after which it plots the data as a function of time and saves both the time and voltage data in a csv file. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Lab__03__Front_8py_afcbb39e69215fb88c23ac9d0c3aadbd5}\label{Lab__03__Front_8py_afcbb39e69215fb88c23ac9d0c3aadbd5}} 
+\index{Lab\_03\_Front.py@{Lab\_03\_Front.py}!inv@{inv}}
+\index{inv@{inv}!Lab\_03\_Front.py@{Lab\_03\_Front.py}}
+\doxysubsubsection{\texorpdfstring{inv}{inv}}
+{\footnotesize\ttfamily Lab\+\_\+03\+\_\+\+Front.\+inv}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  input(\textcolor{stringliteral}{'Input G to initialize program. \(\backslash\)n'}}
+\DoxyCodeLine{2       \textcolor{stringliteral}{'Next press blue button on Nucleo to begin data collection. \(\backslash\)n'}}
+\DoxyCodeLine{3       \textcolor{stringliteral}{'LED on Nucleo will indicate when to push button, may need to press \(\backslash\)n'}}
+\DoxyCodeLine{4       \textcolor{stringliteral}{'more than once if LED does not turn off. \(\backslash\)n'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Lab__03__Front_8py_a9070fb4ff771de1421f6d72faaa05128}\label{Lab__03__Front_8py_a9070fb4ff771de1421f6d72faaa05128}} 
+\index{Lab\_03\_Front.py@{Lab\_03\_Front.py}!state@{state}}
+\index{state@{state}!Lab\_03\_Front.py@{Lab\_03\_Front.py}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily int Lab\+\_\+03\+\_\+\+Front.\+state = 0}
+
+
+
+Variable representing the current program state. 
+
+Varaible storing the stripped and split voltage data from Nucleo. 

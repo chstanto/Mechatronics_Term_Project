@@ -1,0 +1,73 @@
+\hypertarget{classbno055_1_1BNO055}{}\doxysection{bno055.\+B\+N\+O055 Class Reference}
+\label{classbno055_1_1BNO055}\index{bno055.BNO055@{bno055.BNO055}}
+
+
+\mbox{\hyperlink{classbno055_1_1BNO055}{B\+N\+O055}} is a class used to contain obtain the Eularian pitch and roll angles from the bno055 module.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbno055_1_1BNO055_abf973ba26a85af36132cf0b0eb884d85}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classbno055_1_1BNO055_ab2c98347acfdaf404889010b780bbad4}{address}})
+\begin{DoxyCompactList}\small\item\em This function initializes I2C comminication and inital variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_a8c82d77b5fbb3690c9a35f16ce91a4c4}\label{classbno055_1_1BNO055_a8c82d77b5fbb3690c9a35f16ce91a4c4}} 
+def {\bfseries Get\+\_\+thX} (self)
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_a1e86439f61cb20aaea618e80be6f012c}\label{classbno055_1_1BNO055_a1e86439f61cb20aaea618e80be6f012c}} 
+def {\bfseries Get\+\_\+thY} (self)
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_af159ea05e25b1398f239997904ddac7a}\label{classbno055_1_1BNO055_af159ea05e25b1398f239997904ddac7a}} 
+def {\bfseries Get\+\_\+\+Data} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_ab2c98347acfdaf404889010b780bbad4}\label{classbno055_1_1BNO055_ab2c98347acfdaf404889010b780bbad4}} 
+\mbox{\hyperlink{classbno055_1_1BNO055_ab2c98347acfdaf404889010b780bbad4}{address}}
+\begin{DoxyCompactList}\small\item\em Variable containing I2C address of bno055 (28) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_a8c15568ed3d7611af971a617b92c9e2c}\label{classbno055_1_1BNO055_a8c15568ed3d7611af971a617b92c9e2c}} 
+{\bfseries E\+U\+L\+\_\+\+Pitch}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_aabf385e3650f0e474186f0c637e6a324}\label{classbno055_1_1BNO055_aabf385e3650f0e474186f0c637e6a324}} 
+{\bfseries E\+U\+L\+\_\+\+Roll}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_ab3d1c0dd0ccd013cebcf75b05abfad62}\label{classbno055_1_1BNO055_ab3d1c0dd0ccd013cebcf75b05abfad62}} 
+{\bfseries U\+N\+I\+T\+\_\+\+S\+EL}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_afb37aaf85a7829bb5152df18dc935cd6}\label{classbno055_1_1BNO055_afb37aaf85a7829bb5152df18dc935cd6}} 
+{\bfseries O\+P\+R\+\_\+\+M\+O\+DE}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_a6e4029bdf98339217b2ca55ae0263dfa}\label{classbno055_1_1BNO055_a6e4029bdf98339217b2ca55ae0263dfa}} 
+{\bfseries i2c}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_a5f63a5c4f65ceea790f2a940e9ab3bd1}\label{classbno055_1_1BNO055_a5f63a5c4f65ceea790f2a940e9ab3bd1}} 
+{\bfseries sign\+Mask}
+\item 
+\mbox{\Hypertarget{classbno055_1_1BNO055_af4701596ba403c3801ffdebb760ab4a8}\label{classbno055_1_1BNO055_af4701596ba403c3801ffdebb760ab4a8}} 
+{\bfseries neg\+Mask}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbno055_1_1BNO055}{B\+N\+O055}} is a class used to contain obtain the Eularian pitch and roll angles from the bno055 module. 
+
+This class communicates with the bno055 module via I2C communication. The functions contained within read the appropriate registers from the mode, interpret the contents, and return the results as angles in radians. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbno055_1_1BNO055_abf973ba26a85af36132cf0b0eb884d85}\label{classbno055_1_1BNO055_abf973ba26a85af36132cf0b0eb884d85}} 
+\index{bno055.BNO055@{bno055.BNO055}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bno055.BNO055@{bno055.BNO055}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bno055.\+B\+N\+O055.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+
+
+This function initializes I2C comminication and inital variables. 
+
+\begin{DoxyVerb}   @param address  This hex value specifies the I2C adress of the bno055 module. This value is 0x28 by default
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bno055_8py}{bno055.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,129 @@
+\hypertarget{classEncoder__Driver_1_1EncoderDriver}{}\doxysection{Encoder\+\_\+\+Driver.\+Encoder\+Driver Class Reference}
+\label{classEncoder__Driver_1_1EncoderDriver}\index{Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}}
+
+
+This class defines the three functions of the encoder driver.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classEncoder__Driver_1_1EncoderDriver_ad584e8d10edd3d45aade3850f93b951c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, timer\+\_\+number, ch1\+\_\+pin, ch2\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Defines parameters needed for an encoder object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classEncoder__Driver_1_1EncoderDriver_a3b452d6375cbb45c7f5db19e886f55f6}{update}} (self)
+\begin{DoxyCompactList}\small\item\em Function which consistently updates motor position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classEncoder__Driver_1_1EncoderDriver_af97ce33e098eebe460240b365669808b}{get\+\_\+position}} (self)
+\begin{DoxyCompactList}\small\item\em This function returns the current position of the motor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classEncoder__Driver_1_1EncoderDriver_adbc746a2ac75348479f69c373675bf68}{set\+\_\+position}} (self)
+\begin{DoxyCompactList}\small\item\em This function sets the position of the motor to zero. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classEncoder__Driver_1_1EncoderDriver_a2259f2e54f120497c6f41c7103cdefe0}{get\+\_\+delta}} (self)
+\begin{DoxyCompactList}\small\item\em This function returns the most recent delta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_ae88bf57cd0a9d1468beb29cd1cae2c07}\label{classEncoder__Driver_1_1EncoderDriver_ae88bf57cd0a9d1468beb29cd1cae2c07}} 
+{\bfseries ch1\+\_\+pin}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a79a3b093c8d1f8b7ee79ee3ae5390deb}\label{classEncoder__Driver_1_1EncoderDriver_a79a3b093c8d1f8b7ee79ee3ae5390deb}} 
+{\bfseries ch2\+\_\+pin}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a90d50c8919e3dee131e2dc87dd2f3451}\label{classEncoder__Driver_1_1EncoderDriver_a90d50c8919e3dee131e2dc87dd2f3451}} 
+{\bfseries tim1}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_abe0439f07298c868911e816522c179ed}\label{classEncoder__Driver_1_1EncoderDriver_abe0439f07298c868911e816522c179ed}} 
+{\bfseries delt1}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a27acc23ef61ecdbb7e82a078dd9e5069}\label{classEncoder__Driver_1_1EncoderDriver_a27acc23ef61ecdbb7e82a078dd9e5069}} 
+{\bfseries zero1}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a5ec2f296d7348f028f8cb07bbf06c15c}\label{classEncoder__Driver_1_1EncoderDriver_a5ec2f296d7348f028f8cb07bbf06c15c}} 
+{\bfseries pos1}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_ad1006177271272360764e66c7a6eb11b}\label{classEncoder__Driver_1_1EncoderDriver_ad1006177271272360764e66c7a6eb11b}} 
+{\bfseries position1}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a65e7d3ec1677ae00f87f815a59881dbc}\label{classEncoder__Driver_1_1EncoderDriver_a65e7d3ec1677ae00f87f815a59881dbc}} 
+{\bfseries delta1}
+\item 
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a3744f20c80f7cc254d9705914a944e87}\label{classEncoder__Driver_1_1EncoderDriver_a3744f20c80f7cc254d9705914a944e87}} 
+{\bfseries position}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class defines the three functions of the encoder driver. 
+
+The three functions defined by this class are the initialization function, the get position function, the set position function, and the zero function. All three are intended to be called by another file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_ad584e8d10edd3d45aade3850f93b951c}\label{classEncoder__Driver_1_1EncoderDriver_ad584e8d10edd3d45aade3850f93b951c}} 
+\index{Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Encoder\+\_\+\+Driver.\+Encoder\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{timer\+\_\+number,  }\item[{}]{ch1\+\_\+pin,  }\item[{}]{ch2\+\_\+pin }\end{DoxyParamCaption})}
+
+
+
+Defines parameters needed for an encoder object. 
+
+This function accepts 5 inputs to define the appropriate pins and channels needed to use any encoder. Also defines variables needed when updating encoder outputs. 
+\begin{DoxyParams}{Parameters}
+{\em timer\+\_\+number} & Variable for desired timer number \\
+\hline
+{\em ch1\+\_\+pin} & Variable for desired chanel 1 pin \\
+\hline
+{\em ch2\+\_\+pin} & Variable for desired chanel 2 pin \\
+\hline
+{\em ch1\+\_\+num} & Variable for desired chanel 1 number \\
+\hline
+{\em ch2\+\_\+num} & Variable for desired chanel 2 number \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a2259f2e54f120497c6f41c7103cdefe0}\label{classEncoder__Driver_1_1EncoderDriver_a2259f2e54f120497c6f41c7103cdefe0}} 
+\index{Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}!get\_delta@{get\_delta}}
+\index{get\_delta@{get\_delta}!Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{get\_delta()}{get\_delta()}}
+{\footnotesize\ttfamily def Encoder\+\_\+\+Driver.\+Encoder\+Driver.\+get\+\_\+delta (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function returns the most recent delta. 
+
+Returns the difference between the motor position at the last two position updates. \mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_af97ce33e098eebe460240b365669808b}\label{classEncoder__Driver_1_1EncoderDriver_af97ce33e098eebe460240b365669808b}} 
+\index{Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily def Encoder\+\_\+\+Driver.\+Encoder\+Driver.\+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function returns the current position of the motor. 
+
+This function converts the position value into units of degrees and then returns the most recent position. \mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_adbc746a2ac75348479f69c373675bf68}\label{classEncoder__Driver_1_1EncoderDriver_adbc746a2ac75348479f69c373675bf68}} 
+\index{Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily def Encoder\+\_\+\+Driver.\+Encoder\+Driver.\+set\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function sets the position of the motor to zero. 
+
+Sets the zero value to the current position of the motor so that during the next update the position will reflect the zero. \mbox{\Hypertarget{classEncoder__Driver_1_1EncoderDriver_a3b452d6375cbb45c7f5db19e886f55f6}\label{classEncoder__Driver_1_1EncoderDriver_a3b452d6375cbb45c7f5db19e886f55f6}} 
+\index{Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}!update@{update}}
+\index{update@{update}!Encoder\_Driver.EncoderDriver@{Encoder\_Driver.EncoderDriver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def Encoder\+\_\+\+Driver.\+Encoder\+Driver.\+update (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Function which consistently updates motor position. 
+
+Creates an array of two variables which upon every update is changed to reflect the most recent position and the last position. This array makes it easy to access the most recent position as well as the delta between the last update. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Encoder__Driver_8py}{Encoder\+\_\+\+Driver.\+py}}\end{DoxyCompactItemize}
