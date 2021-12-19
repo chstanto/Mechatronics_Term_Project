@@ -1,5 +1,4 @@
 '''
-
 @page       - Balance Table System Modeling
 
 @brief      The objective of this lab was to model the physical system.
